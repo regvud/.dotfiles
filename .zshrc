@@ -105,8 +105,10 @@ export EDITOR="$VISUAL"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='exa'
 alias lsa='exa -a'
-alias vv='nvim'
+alias v='nvim'
+alias zed='~/.local/bin/zed'
 
 # binds
 bindkey '^ ' autosuggest-accept
 bindkey '^e' fzf-cd-widget
+
