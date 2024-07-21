@@ -1,3 +1,11 @@
+local TelescopeColor = {
+  TelescopeNormal = { bg = "none" },
+}
+
+for hl, col in pairs(TelescopeColor) do
+  vim.api.nvim_set_hl(0, hl, col)
+end
+
 local function disable_bold_highlight()
   local highlight_groups = vim.fn.getcompletion("", "highlight")
   for _, group in ipairs(highlight_groups) do
