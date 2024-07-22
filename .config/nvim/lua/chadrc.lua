@@ -7,6 +7,17 @@ local M = {}
 M.ui = {
   theme = "tundra",
 
+  hl_override = {
+    TelescopeNormal = { bg = "none" },
+    TelescopeBorder = { fg = "light_grey" },
+    TelescopePromptBorder = { fg = "light_grey" },
+
+    NvDashAscii = {
+      fg = "green",
+      bg = "none",
+    },
+  },
+
   telescope = { style = "bordered" },
 
   tabufline = {
@@ -17,7 +28,7 @@ M.ui = {
     icons = true,
     lspkind_text = true,
     style = "default", -- default/flat_light/flat_dark/atom/atom_colored
-    border_color = "grey_fg", -- only applicable for "default" style, use color names from base30 variables
+    border_color = "grey_fg", -- only applicable for "default" style, use color names from"yellow"0 variables
     selected_item_bg = "colored", -- colored / simple
   },
 
@@ -41,12 +52,10 @@ M.ui = {
     },
 
     buttons = {
-      { "  Test File", "leader fd", "Telescope find_files" },
-      { "󰈚  Recent Files", "leader fo", "Telescope oldfiles" },
-      { "󰈭  Find Word", "leader fw", "Telescope live_grep" },
-      { "  Bookmarks", "leader ma", "Telescope marks" },
+      { "  Find directory", "leader fd", "Telescope find_files" },
+      { "󰈚  Old files", "leader fo", "Telescope oldfiles" },
+      { "󰈭  Find word", "leader fw", "Telescope live_grep" },
       { "  Themes", "leader th", "Telescope themes" },
-      { "  Mappings", "leader ch", "NvCheatsheet" },
     },
   },
 }
