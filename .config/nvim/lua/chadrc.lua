@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-  theme = "sweetpastel",
+  theme = "catppuccin",
 
   hl_override = {
     TelescopeNormal = { bg = "none" },

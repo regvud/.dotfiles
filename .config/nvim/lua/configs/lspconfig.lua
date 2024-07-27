@@ -9,6 +9,18 @@ local handlers = {
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 
+-- Disable error underlines
+vim.diagnostic.config {
+  underline = false,
+  virtual_text = {
+    spacing = 4,
+    prefix = "●",
+  },
+  signs = true,
+  update_in_insert = false,
+  severity_sort = true,
+}
+
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
