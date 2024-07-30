@@ -9,6 +9,24 @@ local handlers = {
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 
+-- Function to define custom signs
+local function define_diagnostic_signs()
+  local signs = {
+    Error = " ",
+    Warn = " ",
+    Hint = "",
+    Info = " ",
+  }
+
+  for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl })
+  end
+end
+
+-- Call the function to define the signs
+define_diagnostic_signs()
+
 -- Disable error underlines
 vim.diagnostic.config {
   underline = false,

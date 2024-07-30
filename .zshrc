@@ -107,6 +107,7 @@ alias ls='exa'
 alias lsa='exa -a'
 alias v='nvim'
 alias zed='~/.local/bin/zed'
+alias cat='bat -p'
 
 # binds
 bindkey '^ ' autosuggest-accept

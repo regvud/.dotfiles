@@ -16,6 +16,9 @@ map("n", "<leader>ff", "<NOP>")
 map("n", "<leader>cc", "<NOP>")
 map("n", "<leader>gt", "<NOP>")
 
+map("i", "<C-p>", "<NOP>")
+map("i", "<C-n>", "<NOP>")
+
 --general
 map({ "n", "i", "v" }, "<C-c>", "<ESC>")
 
