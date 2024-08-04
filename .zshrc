@@ -108,8 +108,7 @@ alias lsa='exa -a'
 alias v='nvim'
 alias zed='~/.local/bin/zed'
 alias cat='bat -p'
+alias fd="cd ~ && cd \$(find * -type d | fzf)"
 
 # binds
 bindkey '^ ' autosuggest-accept
-bindkey '^e' fzf-cd-widget
-
