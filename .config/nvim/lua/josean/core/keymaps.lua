@@ -14,7 +14,8 @@ map("i", "<C-n>", "<NOP>")
 
 --general
 map({ "n", "i", "v" }, "<C-c>", "<ESC>")
-map({ "n", "i", "v" }, "<ESC>", "<cmd>nohl<cr>")
+map({ "n", "i", "v" }, "<ESC>", "<cmd>nohl<CR><ESC>")
+map({ "n", "i", "v" }, "<C-c>", "<cmd>nohl<CR><ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd>wa<cr>")
 
 --custom
@@ -53,7 +54,7 @@ map("n", "<leader>fg", "<cmd> Telescope git_files <cr>", { desc = "telescope fin
 
 --NvimTree
 map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Focus file explorer" })
-map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+map("n", "<C-n>", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
 
 --diagnostics
 map("n", "<leader>a", function()
