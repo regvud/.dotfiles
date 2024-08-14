@@ -15,6 +15,7 @@ return {
     "rafamadriz/friendly-snippets", -- useful snippets
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
+
   config = function()
     local cmp = require("cmp")
     local lspkind = require("lspkind")
@@ -27,7 +28,7 @@ return {
       completion = {
         completeopt = "menu,menuone,preview,noselect",
       },
-      snippet = { -- configure how nvim-cmp interacts with snippet engine
+      snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
         end,
@@ -35,15 +36,16 @@ return {
       formatting = {
         format = lspkind.cmp_format({
           with_text = true,
-          maxwidth = 50, -- adjust based on your preference
+          maxwidth = 50,
         }),
       },
+
       mapping = cmp.mapping.preset.insert({
         ["<C-k>"] = cmp.mapping.select_prev_item(),
         ["<C-j>"] = cmp.mapping.select_next_item(),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<Tab>"] = cmp.mapping.confirm({ select = false }),
+        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({

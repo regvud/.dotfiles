@@ -11,7 +11,9 @@ opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
-opt.wrap = false
+-- text linebreaks
+opt.wrap = true
+opt.linebreak = true
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
@@ -37,3 +39,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- cursor block
+opt.guicursor = "n-v-c-i:block,r-cr-o:hor20"

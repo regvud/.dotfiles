@@ -7,16 +7,11 @@ return {
     { "folke/neodev.nvim", opts = {} },
   },
   config = function()
-    -- import lspconfig plugin
     local lspconfig = require("lspconfig")
-
-    -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")
-
-    -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-    local keymap = vim.keymap -- for conciseness
+    local keymap = vim.keymap
 
     local handlers = {
       ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
@@ -34,14 +29,8 @@ return {
         opts.desc = "Show LSP references"
         keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>") -- show definition, references
 
-        opts.desc = "Go to declaration"
-        keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
-
         opts.desc = "Show LSP definitions"
         keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
-
-        opts.desc = "Show LSP implementations"
-        keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
         opts.desc = "See available code actions"
         keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
@@ -76,23 +65,22 @@ return {
     end
 
     mason_lspconfig.setup_handlers({
-      -- default handler for installed servers
       function(server_name)
         lspconfig[server_name].setup({
           capabilities = capabilities,
           handlers = handlers,
         })
       end,
+
       ["emmet_ls"] = function()
-        -- configure emmet language server
         lspconfig["emmet_ls"].setup({
           capabilities = capabilities,
           handlers = handlers,
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss" },
         })
       end,
+
       ["lua_ls"] = function()
-        -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
           capabilities = capabilities,
           handlers = handlers,

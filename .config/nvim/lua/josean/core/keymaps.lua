@@ -33,8 +33,8 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 --centering
-map("n", "<C-u>", "<C-u>zz")
-map("n", "<C-d>", "<C-d>zz")
+map({ "n", "v" }, "<C-u>", "<C-u>zz")
+map({ "n", "v" }, "<C-d>", "<C-d>zz")
 map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
@@ -44,11 +44,16 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("x", "p", [["_dP]])
 
 --Telescope
-map("n", "<leader>fd", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files" })
-map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-map("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+map("n", "<leader>fd", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent files" })
+map("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find word" })
 map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-map("n", "<leader>fd", "<cmd> Telescope find_files <cr>", { desc = "telescope find directory" })
+map(
+  "n",
+  "<leader>fa",
+  "<cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<cr>",
+  { desc = "Find all files" }
+)
 map("n", "<leader>/", "<cmd> Telescope current_buffer_fuzzy_find <cr>", { desc = "search" })
 map("n", "<leader>fg", "<cmd> Telescope git_files <cr>", { desc = "telescope find git files" })
 
@@ -66,6 +71,5 @@ map("n", "<leader>gs", "<cmd> Telescope git_status <cr>", { desc = "git status" 
 map("n", "<leader>gc", "<cmd> Telescope git_commits <cr>", { desc = "git commits" })
 
 -- window management
-map("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
-map("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
-map("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
+map("n", "<leader>v", "<C-w>v", { desc = "Split window vertically" })
+map("n", "<leader>h", "<C-w>s", { desc = "Split window horizontally" })
