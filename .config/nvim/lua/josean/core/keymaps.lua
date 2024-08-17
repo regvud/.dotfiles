@@ -73,3 +73,4 @@ map("n", "<leader>gc", "<cmd> Telescope git_commits <cr>", { desc = "git commits
 -- window management
 map("n", "<leader>v", "<C-w>v", { desc = "Split window vertically" })
 map("n", "<leader>h", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<leader>we", "<C-w>=", { desc = "Equal splits" })

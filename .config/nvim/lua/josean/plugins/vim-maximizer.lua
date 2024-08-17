@@ -1,9 +1,3 @@
--- return {
---   "szw/vim-maximizer",
---   keys = {
---     { "<leader>wm", "<cmd>MaximizerToggle<CR>", desc = "Maximize/minimize a split" },
---   },
--- }
 return {
   "szw/vim-maximizer",
   keys = {
@@ -20,11 +14,6 @@ return {
 
         -- Toggle maximizer
         vim.cmd("MaximizerToggle")
-
-        -- Re-open nvim-tree if it was open before
-        if was_open then
-          vim.cmd("NvimTreeOpen")
-        end
       end,
       desc = "Maximize/minimize a split",
     },
