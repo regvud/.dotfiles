@@ -9,14 +9,11 @@ map({ "n", "i", "v" }, "<Up>", "<NOP>")
 map({ "n", "i", "v" }, "<Left>", "<NOP>")
 map({ "n", "i", "v" }, "<Right>", "<NOP>")
 
-map("i", "<C-p>", "<NOP>")
-map("i", "<C-n>", "<NOP>")
-
 --general
 map({ "n", "i", "v" }, "<C-c>", "<ESC>")
-map({ "n", "i", "v" }, "<ESC>", "<cmd>nohl<CR><ESC>")
-map({ "n", "i", "v" }, "<C-c>", "<cmd>nohl<CR><ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd>wa<cr>")
+map("n", "<ESC>", "<cmd>nohl<CR><ESC>")
+map("n", "<C-c>", "<cmd>nohl<CR><ESC>")
 
 --custom
 map("n", "<leader>rn", custom.toggle_relativenumber, { desc = "Toggle relative numbers" })
@@ -69,8 +66,9 @@ end, { desc = "Diagnostics" })
 --git
 map("n", "<leader>gs", "<cmd> Telescope git_status <cr>", { desc = "git status" })
 map("n", "<leader>gc", "<cmd> Telescope git_commits <cr>", { desc = "git commits" })
+map("n", "<leader>gb", "<cmd> Telescope git_branches <cr>", { desc = "git branches" })
 
 -- window management
-map("n", "<leader>v", "<C-w>v", { desc = "Split window vertically" })
-map("n", "<leader>h", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<C-w>h", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<C-w>e", "<C-w>=", { desc = "Equal splits" })
 map("n", "<leader>we", "<C-w>=", { desc = "Equal splits" })

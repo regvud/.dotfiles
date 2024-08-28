@@ -32,11 +32,7 @@ return {
       "⠻⣿⣆⠘⣿⠀⠀⠀⠀⠈⠙⠛⠋⠉⠀⠀⠀⠀⡀⠤⠚⠁",
     }
 
-    dashboard.section.buttons.val = {
-      dashboard.button("SPC fd", "󰱼  > Find File", "<cmd>Telescope find_files<CR>"),
-      dashboard.button("SPC fo", "󰈚  > Old Files", "<cmd>Telescope oldfiles<CR>"),
-      dashboard.button("SPC fw", "󰈭  > Find Word", "<cmd>Telescope live_grep<CR>"),
-    }
+    dashboard.section.buttons.val = { dashboard.button("SPC fd", "󰱼  > Find File", "<cmd>Telescope find_files<CR>") }
 
     -- Send config to alpha
     alpha.setup(dashboard.opts)

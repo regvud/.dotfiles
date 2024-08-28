@@ -5,10 +5,10 @@ return {
       "<leader>m",
       function()
         local view = require("nvim-tree.view")
-        local was_open = view.is_visible()
+        local nvtree_open = view.is_visible()
 
         -- Close nvim-tree before maximizing
-        if was_open then
+        if nvtree_open then
           vim.cmd("NvimTreeClose")
         end
 

@@ -11,6 +11,8 @@ return {
         css = { "prettierd" },
         scss = { "prettierd" },
         json = { "prettierd" },
+        yml = { "prettierd" },
+        yaml = { "prettierd" },
         javascript = { "prettierd" },
         typescript = { "prettierd" },
         javascriptreact = { "prettierd" },
@@ -23,9 +25,7 @@ return {
           end
         end,
       },
-      ["*"] = {
-        { command = "trim", args = { "--all" } },
-      },
+
       format_on_save = {
         timeout_ms = 300,
         lsp_fallback = true,
