@@ -2,6 +2,9 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
 
+opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
+opt.undofile = true
+
 opt.relativenumber = true
 opt.number = true
 
