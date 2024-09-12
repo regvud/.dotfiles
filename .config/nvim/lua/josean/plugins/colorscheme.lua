@@ -90,6 +90,7 @@ local themes = {
         highlight_groups = {
           ["@constant.builtin"] = { fg = "rose" },
           ["@variable.member"] = { fg = "pine" },
+
           ["@keyword"] = { fg = "iris" },
           ["@keyword.repeat"] = { fg = "love" },
           ["@keyword.return"] = { fg = "love" },
@@ -97,15 +98,43 @@ local themes = {
           ["@keyword.conditional"] = { fg = "love" },
           ["@keyword.operator"] = { fg = "love" },
           ["@keyword.exception"] = { fg = "#cf5656" },
-          ["@function.method"] = { fg = "love" },
-          ["@define"] = { fg = "iris" },
-          ["@type"] = { fg = "love" },
-          ["@lsp.type.type.typescript"] = { fg = "love" },
-          ["@lsp.type.property.typescript"] = { fg = "pine" },
-          ["@string"] = { fg = "foam" },
-          ["@string.tsx"] = { fg = "foam" },
+
           ["@constructor"] = { fg = "#6987cb" },
-          ["@comment"] = { fg = "#a4a4a4" },
+          ["@define"] = { fg = "#907aa9" },
+          ["@type"] = { fg = "love" },
+          ["@string"] = { fg = "foam" },
+          ["@comment"] = { fg = "muted" },
+          ["@function.method"] = { fg = "love" },
+
+          -- ts
+          ["@variable.member.tsx"] = { fg = "#975C8D" },
+          ["@variable.member.typescript"] = { fg = "#975C8D" },
+          ["@variable.member.typescriptreact"] = { fg = "#975C8D" },
+
+          ["@lsp.type.property.typescript"] = { fg = "#975C8D" },
+          ["@lsp.type.property.typescriptreact"] = { fg = "#975C8D" },
+
+          ["@lsp.type.interface.typescript"] = { fg = "love" },
+          ["@lsp.type.interface.typescriptreact"] = { fg = "love" },
+
+          ["@function.method.tsx"] = { fg = "rose" },
+          ["@function.method.typescript"] = { fg = "rose" },
+          ["@function.method.typescriptreact"] = { fg = "rose" },
+
+          ["@string.tsx"] = { fg = "foam" },
+          ["@string.typescript"] = { fg = "foam" },
+          ["@string.typescriptreact"] = { fg = "foam" },
+
+          ["@boolean.tsx"] = { fg = "#666a86" },
+          ["@boolean.typescript"] = { fg = "#666a86" },
+          ["@boolean.typescriptreact"] = { fg = "#666a86" },
+
+          ["@tag.builtin.tsx"] = { fg = "#478CCF" },
+          ["@tag.tsx"] = { fg = "#55679C" },
+          ["@tag.attribute.tsx"] = { fg = "rose" },
+
+          --json
+          ["@property.json"] = { fg = "iris" },
         },
       })
     end,
