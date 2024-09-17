@@ -5,7 +5,7 @@ local opt = vim.opt
 opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
 opt.undofile = true
 
-opt.relativenumber = true
+opt.relativenumber = false
 opt.number = true
 
 -- tabs & indentation
