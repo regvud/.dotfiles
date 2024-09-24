@@ -1,0 +1,11 @@
+(defsrc
+  rshift 
+)
+
+(defalias
+  escrshift (tap-hold 150 150 esc rshift)
+)
+
+(deflayer base
+  @escrshift
+)
