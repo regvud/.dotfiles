@@ -13,7 +13,11 @@ function M.load_theme()
   if vim.fn.filereadable(theme_file) == 1 then
     local theme = vim.fn.readfile(theme_file)[1]
     if theme then
-      vim.cmd("colorscheme " .. theme)
+      if string.find(theme, "onenord") then
+        vim.cmd("colorscheme onenord-light")
+      else
+        vim.cmd("colorscheme " .. theme)
+      end
     end
   end
 end

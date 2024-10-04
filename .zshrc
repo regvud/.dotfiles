@@ -112,3 +112,6 @@ alias fd="cd ~ && cd \$(find * -type d | fzf)"
 
 # binds
 bindkey '^ ' autosuggest-accept
+
+
+eval "$(zoxide init zsh)"

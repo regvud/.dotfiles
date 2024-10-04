@@ -13,7 +13,7 @@ end
 M.themeSwitcher = function()
   local current_theme = vim.g.colors_name
   if string.find(current_theme, "catppuccin") then
-    vim.cmd("colorscheme rose-pine-dawn")
+    vim.cmd("colorscheme onenord-light")
   else
     vim.cmd("colorscheme catppuccin")
   end
