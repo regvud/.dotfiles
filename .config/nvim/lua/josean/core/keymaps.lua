@@ -12,8 +12,8 @@ map({ "n", "i", "v" }, "<Right>", "<NOP>")
 --general
 map({ "n", "i", "v" }, "<C-c>", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd>wa<cr>")
-map("n", "<ESC>", "<cmd>nohl<CR><ESC>")
-map("n", "<C-c>", "<cmd>nohl<CR><ESC>")
+map("n", "<ESC>", "<cmd>nohl<CR><ESC>", { silent = true })
+map("n", "<C-c>", "<cmd>nohl<CR><ESC>", { silent = true })
 
 --custom
 map("n", "<leader>rn", custom.toggle_relativenumber, { desc = "Toggle relative numbers" })
