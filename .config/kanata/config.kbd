@@ -1,0 +1,7 @@
+(defsrc 
+  menu
+)
+
+(deflayer
+  menu lctrl
+)

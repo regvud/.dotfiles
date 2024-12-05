@@ -121,7 +121,7 @@ export LC_IDENTIFICATION="en_US.UTF-8"
 alias ls='exa'
 alias lsa='exa -a'
 alias v='nvim'
-alias zed='~/.local/bin/zed'
+# alias zed='~/.local/bin/zed'
 alias cat='bat -p'
 alias fd="cd ~ && cd \$(find * -type d | fzf)"
 
@@ -130,3 +130,16 @@ bindkey '^ ' autosuggest-accept
 
 
 eval "$(zoxide init --cmd cd zsh)"
+# eval $(ssh-agent)
+
+
+export PATH="$HOME/.local/bin:$PATH"
+
+#pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
