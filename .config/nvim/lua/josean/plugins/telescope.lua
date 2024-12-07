@@ -14,6 +14,11 @@ return {
 
     telescope.setup({
       defaults = {
+        layout_config = {
+          horizontal = {
+            preview_width = 0.6,
+          },
+        },
         mappings = {
           i = {
             ["<ESC>"] = actions.close, -- close
@@ -31,5 +36,6 @@ return {
     highlight(0, "TelescopePromptBorder", { bg = "NONE" })
 
     telescope.load_extension("fzf")
+    telescope.load_extension("harpoon")
   end,
 }

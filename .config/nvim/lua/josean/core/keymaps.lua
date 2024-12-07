@@ -12,8 +12,8 @@ map({ "n", "i", "v" }, "<Right>", "<NOP>")
 --general
 map({ "n", "i", "v" }, "<C-c>", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd>wa<cr>")
-map("n", "<ESC>", "<cmd>nohl<CR><ESC>", { silent = true })
-map("n", "<C-c>", "<cmd>nohl<CR><ESC>", { silent = true })
+map("n", "<ESC>", "<cmd>nohl<CR><ESC>", { silent = true, noremap = true })
+map("n", "<C-c>", "<cmd>nohl<CR><ESC>", { silent = true, noremap = true })
 
 --custom
 map("n", "<leader>rn", custom.toggle_relativenumber, { desc = "Toggle relative numbers" })
@@ -55,7 +55,7 @@ map("n", "<leader>/", "<cmd> Telescope current_buffer_fuzzy_find <cr>", { desc =
 map("n", "<leader>fg", "<cmd> Telescope git_files <cr>", { desc = "telescope find git files" })
 
 --NvimTree
-map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Focus file explorer" })
+-- map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Focus file explorer" })
 map("n", "<C-n>", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
 
 --diagnostics
