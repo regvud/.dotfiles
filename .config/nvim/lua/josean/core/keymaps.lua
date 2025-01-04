@@ -17,7 +17,7 @@ map("n", "<C-c>", "<cmd>nohl<CR><ESC>", { silent = true, noremap = true })
 
 --custom
 map("n", "<leader>rn", custom.toggle_relativenumber, { desc = "Toggle relative numbers" })
-map("n", "<leader>t", custom.themeSwitcher, { desc = "Switch theme" })
+-- map("n", "<leader>t", custom.themeSwitcher, { desc = "Switch theme" })
 
 --insert mode movement
 map("i", "<C-j>", "<Down>")
@@ -70,5 +70,7 @@ map("n", "<leader>gb", "<cmd> Telescope git_branches <cr>", { desc = "git branch
 
 -- window management
 map("n", "<C-w>h", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<C-w>t", "<C-w>T", { desc = "Break out into new tab" })
 map("n", "<C-w>e", "<C-w>=", { desc = "Equal splits" })
 map("n", "<leader>we", "<C-w>=", { desc = "Equal splits" })
+map("n", "<leader>t", "<cmd> tabnew <cr>", { desc = "New tab" })

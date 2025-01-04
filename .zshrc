@@ -121,9 +121,10 @@ export LC_IDENTIFICATION="en_US.UTF-8"
 alias ls='exa'
 alias lsa='exa -a'
 alias v='nvim'
-# alias zed='~/.local/bin/zed'
+alias z='zeditor'
 alias cat='bat -p'
 alias fd="cd ~ && cd \$(find * -type d | fzf)"
+alias lg="lazygit"
 
 # binds
 bindkey '^ ' autosuggest-accept

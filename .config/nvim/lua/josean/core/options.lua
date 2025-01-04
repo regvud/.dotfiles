@@ -44,4 +44,4 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false
 
 -- cursor block
-opt.guicursor = "n-v-c-i:block,r-cr-o:hor20"
+-- opt.guicursor = "n-v-c-i:block,r-cr-o:hor20"
