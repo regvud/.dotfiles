@@ -36,6 +36,5 @@ return {
     highlight(0, "TelescopePromptBorder", { bg = "NONE" })
 
     telescope.load_extension("fzf")
-    telescope.load_extension("harpoon")
   end,
 }

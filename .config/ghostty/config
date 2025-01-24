@@ -13,3 +13,5 @@ window-decoration = false
 window-padding-x = 0
 window-padding-y = 0
 
+keybind = unconsumed:super+backspace=toggle_fullscreen
+keybind = unconsumed:ctrl+enter=unbind

@@ -8,6 +8,7 @@ map({ "n", "i", "v" }, "<Down>", "<NOP>")
 map({ "n", "i", "v" }, "<Up>", "<NOP>")
 map({ "n", "i", "v" }, "<Left>", "<NOP>")
 map({ "n", "i", "v" }, "<Right>", "<NOP>")
+map({ "n", "i", "v" }, "<C-t>", "<NOP>")
 
 --general
 map({ "n", "i", "v" }, "<C-c>", "<ESC>")
@@ -73,4 +74,8 @@ map("n", "<C-w>h", "<C-w>s", { desc = "Split window horizontally" })
 map("n", "<C-w>t", "<C-w>T", { desc = "Break out into new tab" })
 map("n", "<C-w>e", "<C-w>=", { desc = "Equal splits" })
 map("n", "<leader>we", "<C-w>=", { desc = "Equal splits" })
-map("n", "<leader>t", "<cmd> tabnew <cr>", { desc = "New tab" })
+
+-- buffers
+map("n", "<C-e>", "<cmd> BufferPick <cr>", { desc = "Pick buffer" })
+map("n", "<C-t>o", "<cmd> BufferCloseAllButVisible <cr>", { desc = "Close other tabs" })
+map("n", "<C-t>q", "<cmd> BufferClose <cr>", { desc = "Close current buffer" })
