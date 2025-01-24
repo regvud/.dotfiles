@@ -18,7 +18,6 @@ map("n", "<C-c>", "<cmd>nohl<CR><ESC>", { silent = true, noremap = true })
 
 --custom
 map("n", "<leader>rn", custom.toggle_relativenumber, { desc = "Toggle relative numbers" })
--- map("n", "<leader>t", custom.themeSwitcher, { desc = "Switch theme" })
 
 --insert mode movement
 map("i", "<C-j>", "<Down>")
@@ -56,7 +55,6 @@ map("n", "<leader>/", "<cmd> Telescope current_buffer_fuzzy_find <cr>", { desc =
 map("n", "<leader>fg", "<cmd> Telescope git_files <cr>", { desc = "telescope find git files" })
 
 --NvimTree
--- map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Focus file explorer" })
 map("n", "<C-n>", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
 
 --diagnostics
@@ -65,9 +63,9 @@ map("n", "<leader>a", function()
 end, { desc = "Diagnostics" })
 
 --git
-map("n", "<leader>gs", "<cmd> Telescope git_status <cr>", { desc = "git status" })
-map("n", "<leader>gc", "<cmd> Telescope git_commits <cr>", { desc = "git commits" })
-map("n", "<leader>gb", "<cmd> Telescope git_branches <cr>", { desc = "git branches" })
+map("n", "<leader>[", "<cmd> Gitsigns next_hunk <cr>", { desc = "git next hunk" })
+map("n", "<leader>]", "<cmd> Gitsigns prev_hunk <cr>", { desc = "git prev hunk" })
+map("n", "<leader>p", "<cmd> Gitsigns preview_hunk <cr>", { desc = "git preview hunk" })
 
 -- window management
 map("n", "<C-w>h", "<C-w>s", { desc = "Split window horizontally" })
