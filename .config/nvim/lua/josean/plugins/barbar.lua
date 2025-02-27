@@ -13,6 +13,7 @@ return {
         icons = {
           separator_at_end = false,
         },
+        animation = false,
       })
     end,
     opts = {},

@@ -18,6 +18,7 @@ map("n", "<C-c>", "<cmd>nohl<CR><ESC>", { silent = true, noremap = true })
 
 --custom
 map("n", "<leader>rn", custom.toggle_relativenumber, { desc = "Toggle relative numbers" })
+map("n", "<leader>rt", custom.themeSwitcher, { desc = "Switch theme" })
 
 --insert mode movement
 map("i", "<C-j>", "<Down>")
