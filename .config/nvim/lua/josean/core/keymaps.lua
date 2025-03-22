@@ -37,7 +37,7 @@ map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
 --replace
-map("n", "s", "^C")
+-- map("n", "s", "^C")
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("x", "p", [["_dP]])
 

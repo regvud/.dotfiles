@@ -151,3 +151,7 @@ penv() {
         echo "Not inside a Poetry project"
     fi
 }
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
