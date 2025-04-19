@@ -8,6 +8,7 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         html = { "prettierd" },
+        htmlangular = { "prettierd" },
         css = { "prettierd" },
         scss = { "prettierd" },
         json = { "prettierd" },
@@ -24,6 +25,12 @@ return {
             return { "isort", "black" }
           end
         end,
+      },
+
+      formatters = {
+        prettierd = {
+          prepend_args = { "--single-quote" },
+        },
       },
 
       format_on_save = {

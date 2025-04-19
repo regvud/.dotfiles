@@ -3,13 +3,6 @@ vim.g.mapleader = " "
 local custom = require("josean.core.custom")
 local map = vim.keymap.set
 
---unbind
-map({ "n", "i", "v" }, "<Down>", "<NOP>")
-map({ "n", "i", "v" }, "<Up>", "<NOP>")
-map({ "n", "i", "v" }, "<Left>", "<NOP>")
-map({ "n", "i", "v" }, "<Right>", "<NOP>")
-map({ "n", "i", "v" }, "<C-t>", "<NOP>")
-
 --general
 map({ "n", "i", "v" }, "<C-c>", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd>wa<cr>")
@@ -37,23 +30,20 @@ map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
 --replace
--- map("n", "s", "^C")
+map("n", "s", "^C")
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("x", "p", [["_dP]])
 
 --Telescope
-map("n", "<leader>fd", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
-map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent files" })
 map("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find word" })
 map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 map(
   "n",
-  "<leader>fa",
+  "<leader>fd",
   "<cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<cr>",
-  { desc = "Find all files" }
+  { desc = "Find files" }
 )
 map("n", "<leader>/", "<cmd> Telescope current_buffer_fuzzy_find <cr>", { desc = "search" })
-map("n", "<leader>fg", "<cmd> Telescope git_files <cr>", { desc = "telescope find git files" })
 
 --NvimTree
 map("n", "<C-n>", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })

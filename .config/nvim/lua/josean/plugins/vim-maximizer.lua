@@ -2,7 +2,7 @@ return {
   "szw/vim-maximizer",
   keys = {
     {
-      "<leader>m",
+      "<C-m>",
       function()
         local view = require("nvim-tree.view")
         local nvtree_open = view.is_visible()

@@ -73,7 +73,6 @@ ZSH_THEME="refined"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions fzf)
 
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -82,18 +81,7 @@ export EDITOR="$VISUAL"
 
 
 export LANG=en_US.UTF-8
-export LC_CTYPE="en_US.UTF-8"
-export LC_NUMERIC="en_US.UTF-8"
-export LC_TIME="en_US.UTF-8"
-export LC_COLLATE="en_US.UTF-8"
-export LC_MONETARY="en_US.UTF-8"
-export LC_MESSAGES="en_US.UTF-8"
-export LC_PAPER="en_US.UTF-8"
-export LC_NAME="en_US.UTF-8"
-export LC_ADDRESS="en_US.UTF-8"
-export LC_TELEPHONE="en_US.UTF-8"
-export LC_MEASUREMENT="en_US.UTF-8"
-export LC_IDENTIFICATION="en_US.UTF-8"
+export LC_ALL=en_US.UTF-8
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -121,7 +109,6 @@ export LC_IDENTIFICATION="en_US.UTF-8"
 alias ls='exa'
 alias lsa='exa -a'
 alias v='nvim'
-alias z='zeditor'
 alias cat='bat -p'
 alias fd="cd ~ && cd \$(find * -type d | fzf)"
 alias lg="lazygit"
@@ -135,14 +122,10 @@ eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="$HOME/.local/bin:$PATH"
 
-#pyenv
+# pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 penv() {
     if poetry env info --path &>/dev/null; then
@@ -152,6 +135,20 @@ penv() {
     fi
 }
 
+# LOAD NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# _ng_completion_loaded=false
+#
+# load-ng-completion() {
+#   if ! $_ng_completion_loaded; then
+#     source <(ng completion script)
+#     _ng_completion_loaded=true
+#   fi
+# }
+#
+# compdef '_ng_completion_loaded || load-ng-completion; _ng_completion_loaded && _ng' ng
