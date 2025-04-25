@@ -71,7 +71,7 @@ ZSH_THEME="refined"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions fzf)
+plugins=(git zsh-autosuggestions fzf poetry)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,7 +122,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="$HOME/.local/bin:$PATH"
 
-# pyenv
+# POETRY
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
@@ -135,20 +135,12 @@ penv() {
     fi
 }
 
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # LOAD NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
-
-# _ng_completion_loaded=false
-#
-# load-ng-completion() {
-#   if ! $_ng_completion_loaded; then
-#     source <(ng completion script)
-#     _ng_completion_loaded=true
-#   fi
-# }
-#
-# compdef '_ng_completion_loaded || load-ng-completion; _ng_completion_loaded && _ng' ng

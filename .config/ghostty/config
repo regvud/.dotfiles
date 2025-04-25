@@ -2,7 +2,7 @@ theme = catppuccin-mocha
 background = #1a1b26
 foreground = #fbfcfc
 
-font-family = JetBrainsMono Nerd Font
+font-family = FiraCode Nerd Font
 
 cursor-style = block
 cursor-style-blink = false
