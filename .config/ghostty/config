@@ -1,8 +1,8 @@
-theme = catppuccin-mocha
-background = #1a1b26
+theme = electron-highlighter
+background = #1a1b26 
 foreground = #fbfcfc
 
-font-family = FiraCode Nerd Font
+font-family = JetBrainsMono Nerd Font
 
 cursor-style = block
 cursor-style-blink = false
@@ -15,3 +15,4 @@ window-padding-y = 0
 
 keybind = unconsumed:super+backspace=toggle_fullscreen
 keybind = unconsumed:ctrl+enter=unbind
+keybind = performable:ctrl+c=copy_to_clipboard

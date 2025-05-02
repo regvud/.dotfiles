@@ -13,6 +13,9 @@ return {
     local actions = require("telescope.actions")
 
     telescope.setup({
+      extensions = {
+        fzf = {}
+      },
       defaults = {
         layout_config = {
           horizontal = {
@@ -36,5 +39,6 @@ return {
     highlight(0, "TelescopePromptBorder", { bg = "NONE" })
 
     telescope.load_extension("fzf")
+    require "josean.core.multigrep".setup()
   end,
 }

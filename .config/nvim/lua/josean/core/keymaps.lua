@@ -35,7 +35,7 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("x", "p", [["_dP]])
 
 --Telescope
-map("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find word" })
+-- map("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find word" })
 map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 map(
   "n",
