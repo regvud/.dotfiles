@@ -17,11 +17,8 @@ return {
         fzf = {}
       },
       defaults = {
-        layout_config = {
-          horizontal = {
-            preview_width = 0.6,
-          },
-        },
+        layout_config = { prompt_position = "top", preview_width = 0.55 },
+        sorting_strategy = "ascending",
         mappings = {
           i = {
             ["<ESC>"] = actions.close, -- close
