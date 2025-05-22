@@ -35,8 +35,8 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("x", "p", [["_dP]])
 
 --Telescope
--- map("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find word" })
 map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+map("n", "<leader>fn", "<cmd>Telescope notify<cr>", { desc = "Find notifies" })
 map(
   "n",
   "<leader>fd",
@@ -57,6 +57,7 @@ end, { desc = "Diagnostics" })
 map("n", "<leader>[", "<cmd> Gitsigns next_hunk <cr>", { desc = "git next hunk" })
 map("n", "<leader>]", "<cmd> Gitsigns prev_hunk <cr>", { desc = "git prev hunk" })
 map("n", "<leader>p", "<cmd> Gitsigns preview_hunk <cr>", { desc = "git preview hunk" })
+map("n", "<leader>gb", "<cmd> Gitsigns blame <cr>", { desc = "git blame" })
 
 -- window management
 map("n", "<C-w>h", "<C-w>s", { desc = "Split window horizontally" })

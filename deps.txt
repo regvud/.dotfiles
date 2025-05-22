@@ -4,6 +4,7 @@ cmake
 curl
 diffutils
 docker
+docker-compose
 eza
 fzf
 ghostty
@@ -33,3 +34,5 @@ luarocks
 gnome-browser-connector
 htop
 neofetch
+libreoffice-still
+fd

@@ -10,3 +10,6 @@ theme_manager.load_theme()
 vim.api.nvim_create_autocmd("VimLeavePre", {
   callback = theme_manager.save_theme,
 })
+
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.opt.termguicolors = true

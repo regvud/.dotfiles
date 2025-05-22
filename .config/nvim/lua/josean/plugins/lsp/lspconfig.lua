@@ -64,39 +64,39 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    mason_lspconfig.setup_handlers({
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-          handlers = handlers,
-        })
-      end,
-
-      ["emmet_ls"] = function()
-        lspconfig["emmet_ls"].setup({
-          capabilities = capabilities,
-          handlers = handlers,
-          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss" },
-        })
-      end,
-
-      ["lua_ls"] = function()
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          handlers = handlers,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
-    })
+    -- mason_lspconfig.setup_handlers({
+    --   function(server_name)
+    --     lspconfig[server_name].setup({
+    --       capabilities = capabilities,
+    --       handlers = handlers,
+    --     })
+    --   end,
+    --
+    --   ["emmet_ls"] = function()
+    --     lspconfig["emmet_ls"].setup({
+    --       capabilities = capabilities,
+    --       handlers = handlers,
+    --       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss" },
+    --     })
+    --   end,
+    --
+    --   ["lua_ls"] = function()
+    --     lspconfig["lua_ls"].setup({
+    --       capabilities = capabilities,
+    --       handlers = handlers,
+    --       settings = {
+    --         Lua = {
+    --           -- make the language server recognize "vim" global
+    --           diagnostics = {
+    --             globals = { "vim" },
+    --           },
+    --           completion = {
+    --             callSnippet = "Replace",
+    --           },
+    --         },
+    --       },
+    --     })
+    --   end,
+    -- })
   end,
 }
