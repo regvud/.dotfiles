@@ -35,11 +35,11 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 map("x", "p", [["_dP]])
 
 --Telescope
-map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-map("n", "<leader>fn", "<cmd>Telescope notify<cr>", { desc = "Find notifies" })
+map("n", "<leader>t", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+map("n", "<leader>n", "<cmd>Telescope notify<cr>", { desc = "Find notifies" })
 map(
   "n",
-  "<leader>fd",
+  "<leader>d",
   "<cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<cr>",
   { desc = "Find files" }
 )
@@ -63,7 +63,6 @@ map("n", "<leader>gb", "<cmd> Gitsigns blame <cr>", { desc = "git blame" })
 map("n", "<C-w>h", "<C-w>s", { desc = "Split window horizontally" })
 map("n", "<C-w>t", "<C-w>T", { desc = "Break out into new tab" })
 map("n", "<C-w>e", "<C-w>=", { desc = "Equal splits" })
-map("n", "<leader>we", "<C-w>=", { desc = "Equal splits" })
 
 -- buffers
 map("n", "<C-e>", "<cmd> BufferPick <cr>", { desc = "Pick buffer" })

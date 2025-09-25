@@ -36,3 +36,6 @@ htop
 neofetch
 libreoffice-still
 fd
+noto-fonts-cjk
+dbeaver
+gimp
