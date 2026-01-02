@@ -38,5 +38,15 @@ return {
       --   lsp_fallback = true,
       -- },
     })
+
+    vim.api.nvim_create_user_command("Format", function()
+      conform.format({
+        async = true,
+        lsp_fallback = true,
+        timeout_ms = 300,
+      })
+    end, { desc = "" })
+
+    vim.keymap.set("n", "<C-f>", "<cmd>Format<CR>", { desc = "Format current buffer" })
   end,
 }
