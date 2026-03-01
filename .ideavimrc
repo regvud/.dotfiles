@@ -1,0 +1,22 @@
+set clipboard+=unnamedplus
+set ignorecase
+set smartcase
+
+set idearefactormode=keep
+set ideajoin
+set surround
+set easymotion
+set NERDTree
+
+let mapleader = " "
+
+nmap <leader>a <action>(ShowErrorDescription)
+nmap <leader>w <action>(FindInPath)
+nmap <leader>d <action>(GotoFile)
+nmap <leader>r <action>(RenameElement)
+
+nmap <C-n> <action>(ActivateProjectToolWindow)
+nmap <C-h> <action>(ActivateProjectToolWindow)
+
+nmap <C-u> <C-u>zz
+nmap <C-d> <C-d>zz
