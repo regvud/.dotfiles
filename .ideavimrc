@@ -1,3 +1,9 @@
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+set scrolloff=5
+set incsearch
+
 set clipboard+=unnamedplus
 set ignorecase
 set smartcase
@@ -17,6 +23,7 @@ nmap <leader>r <action>(RenameElement)
 
 nmap <C-n> <action>(ActivateProjectToolWindow)
 nmap <C-h> <action>(ActivateProjectToolWindow)
+nmap <C-f> <action>(ReformatCode)
 
 nmap <C-u> <C-u>zz
 nmap <C-d> <C-d>zz
