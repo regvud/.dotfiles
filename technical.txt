@@ -1,8 +1,2 @@
 ARCH Signature is unknown trust package update:
 pacman -Sy archlinux-keyring && pacman -Su
-
-
-POWERSHELL:
-if ($PWD.Path -eq $HOME) {
-    Set-Location "D:\repos"
-}
