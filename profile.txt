@@ -1,0 +1,13 @@
+Invoke-Expression (& { (zoxide init --cmd cd powershell | Out-String) })
+Invoke-Expression (&starship init powershell)
+
+
+# Only change directory if starting in user's home directory
+if ($PWD.Path -eq $HOME) {
+    Set-Location "D:\repos"
+}
+
+Set-Alias lg lazygit
+Set-Alias v nvim
+
+function l { Get-ChildItem -Force $args }

@@ -1,2 +1,0 @@
-ARCH Signature is unknown trust package update:
-pacman -Sy archlinux-keyring && pacman -Su
